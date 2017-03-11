@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Angular Sample</title>
+		<!-- <style rel="stylesheet" href="../css/sample.css" -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<script src="../javascript/sample.js"></script>
+	</head>
+	<body ng-app="myApp" ng-controller="myCtrl">
+		<div>
+			<input style="background-color:{{test}}" ng-model="test" type="text" value="{{test}}" />
+		</div>
+		<div ng-style="myStyle"> 
+			Sample Block
+		</div>
+		
+	</body>
+</html>
