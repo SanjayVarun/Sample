@@ -1,0 +1,16 @@
+@CHARSET "ISO-8859-1";
+body{
+	background-image : url("Home-Service-Provider1.jpg");
+	width:150px;
+	height:150px;
+}
+.SignupContent{
+	
+	
+	margin:0px auto;
+	font-family: cursive;
+	font-size: large;
+	font-weight: bold;
+	margin-top:200px;
+	margin-left:500px;
+}
