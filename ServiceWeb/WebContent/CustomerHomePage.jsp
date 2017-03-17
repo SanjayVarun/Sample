@@ -8,7 +8,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Welcome!</title>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-<script src="CustomerHome.js"></script>
+<script src="Controller.js"></script>
 </head>
 <body>
 <div id="Fullpage" class="Fullpage">
@@ -16,7 +16,7 @@
 CustomerBean cb=new CustomerBean();
 CustomerDAO cdao=new CustomerDAO();
 cb=cdao.displayCustomerDetails((String)session.getAttribute("uname"));
-
+session.setAttribute("cid", cb.getCustomer_id());
 %>
 <div class="Details">
 <table>
@@ -43,9 +43,27 @@ cb=cdao.displayCustomerDetails((String)session.getAttribute("uname"));
 	</table>
 	
 </div>
-<div class="Buttons">
+<div class="Buttons" ng-app="customerApp" ng-controller="customerCtrl">
+<button type="Button" class="buttons" ng-click="search()">Search for service providers?</button>
 <form action="Search.jsp">
-<button type="Button" class="buttons">Search for service providers?</button>
+<fieldset  ng-show="showTypes">
+<div class="searchlocation">
+Enter Location : <input type="text" class="location" name="location">
+</div>
+<div id="ServiceType" class="ServiceType"> 
+Choose Service Types : 
+
+<label for="ServiceType"> Service Type </label>
+ <input type="radio" class="ServiceType" id="Elec" name="profession" value="Electrical">Electrical
+ <input type="radio" class="ServiceType" id="Plumbing" name="profession" value="Plumbing"> Plumbing
+ <input type="radio" class="ServiceType" id="PC"name="profession" value="PC Assist">PC Assist
+ <input type="radio" class="ServiceType" id="Carpentry"name="profession" value="Carpentry">Carpentry 
+ <input type="radio" class="ServiceType" id="Mechanic" name="profession" value="Mechanic"> Mechanic
+ <input type="radio" class="ServiceType" id="Houseclean" name="profession" value="House Cleaning">House Cleaning 
+</div>
+<button type="submit">Search</button>
+</fieldset>
+
 </form>
 </div>
 </div>
