@@ -8,29 +8,32 @@
 
 </head>
 <body>
+<div class="exceptsignup"></div>
 <div class="SignupContent">
-<form method="post" action="RegisterServlet">
-<div class="Radiobuttons">
-<input type="radio" class="Serviceproviderradio" name="radio" value="ServiceProvider" onclick="showServiceType()"> ServiceProvider
-<input type="radio" class="Customerradio" name="radio" value="Customer" onclick="hideServiceType()">Customer
-</div>
 
-<div class="usernamefield"> 
-<label for="usernamefield"> Username </label>
-<input type="text" class="usernamefield" name="Username">
-</div>
+  <div class="Registerform">
+ <form method="post" action="RegisterServlet">
+ <div class="Radiobuttons">
+ <input type="radio" class="Serviceproviderradio" name="radio" value="ServiceProvider" onclick="showServiceType()"> ServiceProvider
+ <input type="radio" class="Customerradio" name="radio" value="Customer" onclick="hideServiceType()">Customer
+ </div>
 
-<div class="passwordfield"> 
-<label for="passwordfield"> Password </label>
-<input type="password" class="passwordfield" name="Password">
-</div>
+ <div class="usernamefield"> 
+ <label for="usernamefield"> Username </label>
+ <input type="text" class="usernamefield" name="Username">
+ </div>
 
-<div class="namefield"> 
-<label for="namefield"> Name </label>
-<input type="text" class="namefield" name="Name">
-</div>
+ <div class="passwordfield"> 
+ <label for="passwordfield"> Password </label>
+ <input type="password" class="passwordfield" name="Password">
+ </div>
 
-<div class="Phnotext"> 
+ <div class="namefield"> 
+ <label for="namefield"> Name </label>
+ <input type="text" class="namefield" name="Name">
+ </div>
+
+ <div class="Phnotext"> 
 <label for="Phnotext"> Phone Number </label>
  <input type="text" class="Phnotext" name="Phonenumber">
  </div>
@@ -40,7 +43,7 @@
  <input type="text" class="Loctext" name="Location">
 </div>
 
-<div id="Addressdiv" hidden="false">
+<div id="Addressdiv">
 
 <div class="Addresstext"> 
 <label for="Addresstext"> Address </label>
@@ -54,7 +57,7 @@
 
 </div>
 
-<div id="ServiceTime" hidden="true">
+<div id="ServiceTime">
 
 <div class="Fromtime"> 
 <label for="Fromtime"> From </label>
@@ -68,7 +71,7 @@
 
 </div>
 
-<div id="ServiceType" class="ServiceType" hidden="true"> 
+<div id="ServiceType" class="ServiceType"> 
 <label for="ServiceType"> Service Type </label>
  <input type="checkbox" class="ServiceType" id="Elec" name="profession" value="Electrical">Electrical
  <input type="checkbox" class="ServiceType" id="Plumbing" name="profession" value="Plumbing"> Plumbing
@@ -83,6 +86,7 @@
 </div>
 
 </form>
+</div>
 </div>
 </body>
 </html>
