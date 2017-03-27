@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Welcome!</title>
+    <link rel="stylesheet" href="Home.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="Home.js"></script>
+</head>
+<body ng-app="homeApp" ng-controller="homeCtrl">
+    <div id="Homepagepopup" ng-show="show">
+        <form method="post" action="Login">
+            <div class="rbuttons">
+                <div class="serviceProviderBlock">
+                    <input type="radio" class="Serviceproviderradio" name="radio1" value="2">ServiceProvider
+                </div>
+                <div class="customerBlock">
+                    <input type="radio" class="Customerradio" name="radio1" value="1">Customer
+                </div>
+            </div>
+            <div class="usernameBlock">
+                <span class="usernameLabel">
+                    <label for="usernamefield">Username:</label>
+                </span>
+                <input type="text" class="usernamefield" name="usernamefield">
+            </div>
+            <div class="passwordBlock">
+                <span class="passwordLabel">
+                    <label for="passwordfield">Password:</label>
+                </span>
+                <input type="password" class="passwordfield" name="passwordfield">
+            </div>
+            <div class="buttonBlock">
+                <div class="submitButton">
+                    <button type="submit">Login</button>
+                </div>
+                <div class="cancelButton">
+                    <button type="button" ng-click="fadeIn();show=!show">Cancel</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    <div class="Wholepage" ng-style="opacity">
+        <nav class="HomeContents">
+            <ul>
+                <li><div class="login" ng-click="fadeOut();show=!show">Login</div></li>
+                <li><div class="signup" ng-click="signupDirect()">Signup</div></li>
+            </ul>
+        </nav>
+        <div class="Hometext">
+            <h1 class="mainheader">Sahayaka</h1>
+            <p class="maincontent">
+                Welcome to Sahayaka! An online platform to connect service professionals with customers at home.
+                Customers get served with expert professionals at their doorsteps. You're just a click away from availing the expert services!
+            </p>
+        </div>
+    </div>
+</body>
+</html>
