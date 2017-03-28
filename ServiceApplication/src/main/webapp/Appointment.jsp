@@ -10,8 +10,9 @@
 </head>
 <body>
   <%AdminBean ab=new AdminBean();
-  int sp_id=Integer.parseInt(request.getParameter("choice"));
-  ab.setSp_id(sp_id);
+ int sp_id=Integer.parseInt(request.getParameter("choice"));
+  
+ 
 int cid=(Integer)(session.getAttribute("cid"));
 ab.setCust_id(cid);
 ServiceProviderBean sb=new ServiceProviderBean();

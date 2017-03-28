@@ -56,8 +56,8 @@ Choose Service Types :
 <label for="ServiceType"> Service Type </label>
  <input type="radio" class="ServiceType" id="Elec" name="profession" value="Electrical">Electrical
  <input type="radio" class="ServiceType" id="Plumbing" name="profession" value="Plumbing"> Plumbing
- <input type="radio" class="ServiceType" id="PC"name="profession" value="PC Assist">PC Assist
- <input type="radio" class="ServiceType" id="Carpentry"name="profession" value="Carpentry">Carpentry 
+ <input type="radio" class="ServiceType" id="PC" name="profession" value="PC Assist">PC Assist
+ <input type="radio" class="ServiceType" id="Carpentry" name="profession" value="Carpentry">Carpentry 
  <input type="radio" class="ServiceType" id="Mechanic" name="profession" value="Mechanic"> Mechanic
  <input type="radio" class="ServiceType" id="Houseclean" name="profession" value="House Cleaning">House Cleaning 
 </div>

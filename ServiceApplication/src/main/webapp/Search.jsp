@@ -14,7 +14,7 @@
 <%=loc%>
 <label class="servelabel">Service Type Requested : </label>
 <% String servicetype=request.getParameter("profession");%>
-
+<%=servicetype %>
 <%ServiceProviderDAO sdao=new ServiceProviderDAO();
 List<ServiceProviderBean> list=new ArrayList<ServiceProviderBean>();
 list=sdao.search(loc, servicetype);%>
@@ -41,7 +41,8 @@ list=sdao.search(loc, servicetype);%>
     <td><%=sb.getService_provider_location() %></td>
     <td><%=sb.getService_provider_from_time() %></td>
     <td><%=sb.getService_provider_to_time() %></td>
-    <td><input type="radio" name="choice" value=<%=sb.getService_provider_id()%>></td>
+   
+    <td><input type="radio" name="choice" id="choice" value=<%=sb.getService_provider_id()%>></td>
 	</tr>
 	
  <% }

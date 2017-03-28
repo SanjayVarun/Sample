@@ -176,6 +176,33 @@ public class ServiceProviderDAO {
 		
 	}
 
+	public List<ServiceProviderBean> selectAll() {
+		String select="SELECT * FROM T_XBBNHFN_ADMINDETAILS";
+		List<ServiceProviderBean> list=new ArrayList<ServiceProviderBean>();
+		ServiceProviderBean sb=new ServiceProviderBean();
+		try{
+			ps=con.prepareStatement(select);
+			rs=ps.executeQuery();
+			while(rs.next())
+			{
+			 sb.setService_provider_id(rs.getInt(1));
+			 sb.setService_provider_name(rs.getString(2));
+			 sb.setService_provider_phone_number(rs.getString(3));
+			 sb.setService_provider_location(rs.getString(4));
+			 sb.setService_provider_from_time(rs.getString(5));
+			 sb.setService_provider_to_time(rs.getString(6));
+			 sb.setService_Type(rs.getString(7));
+			 sb.setSp_uname(rs.getString(8));
+			}
+			list.add(sb);
+		}
+		catch(SQLException e)
+		{
+			System.out.println(e);
+		}
+		return list;
+	}
+
 	
 	
 	
