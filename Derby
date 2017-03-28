@@ -1,0 +1,15 @@
+edit the below file
+C:\BXP Dev Env\eclipse-kepler-win32-1.0\eclipse-kepler-win32\jdk7-u51\jre\lib\security\java.policy
+                        
+        //Derby
+        permission java.net.SocketPermission "localhost:1527", "listen";
+
+Bring up the server using cmd prompt
+
+cd C:\BXP Dev Env\eclipse-kepler-win32-1.0\eclipse-kepler-win32\jdk7-u51\db\bin
+set  DERBY_HOME=C:\Data\jdk7-u51\db;
+set  JAVA_HOME=C:\Data\jdk7-u51\bin;
+set  PATH=C:\Data\jdk7-u51\db\bin;C:\Data\jdk7-u51\bin;%PATH%;
+set  DERBY_HOME=C:\Data\jdk7-u51\db
+C:\BXP Dev Env\eclipse-kepler-win32-1.0\eclipse-kepler-win32\jdk7-u51\db\bin>startNetworkServer -h  172.00.00.00
+
