@@ -1,0 +1,66 @@
+@CHARSET "ISO-8859-1";
+body{
+	width:1350px;
+	height:640px;
+	
+}
+
+.SignupContent{
+		width:30%;
+		float:right;	    }
+.Registerform{
+	margin-top:75px;
+	float:left;
+	
+}
+.exceptsignup{
+	background-image:url("verified-professionals.png");
+	width:70%;
+	
+	}
+label{
+	margin-right:10px;
+}
+input.namefield{
+	margin-left:58px;
+}
+input.usernamefield{
+	margin-left:32px;
+}
+
+input.passwordfield{
+	margin-left:35px;
+}
+
+input.Phnotext{
+	margin-left:-1px;
+}
+input.Loctext{
+	margin-left:39px;
+	}
+input.Addresstext{
+	margin-left:43px;
+	}
+	
+input.Emailtext{
+	margin-left:40px;
+	}
+input.Fromtime{
+	margin-left:60px;
+	}
+input.Totime{
+	margin-left:77px;
+	}
+input.ServiceType{
+	margin:7px;
+	}
+input.submitbutton{
+	margin-left:120px;
+}
+	
+	
+.Radiobuttons,.usernamefield,.passwordfield,.namefield,.Phnotext,.Loctext,.Addresstext,.Emailtext,
+	.Fromtime,.Totime,.ServiceType,.submitbutton{
+	display:inline-block;
+	margin:4px;
+}

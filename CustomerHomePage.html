@@ -1,0 +1,108 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Welcome!</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+</head>
+<body>
+	<div id="Fullpage" class="Fullpage" ng-app="customerApp"
+		ng-controller="Controller">
+		<!-- <div class="Details">
+<table>
+	<tr ng-repeat="x in customerdata">
+	
+	<td>{{x.customer_name}}</td>
+	
+	<td>{{x.phone_number}}</td>
+	
+	<td>{{x.email_id}}</td>
+	
+	<td>{{x.location}}</td>
+	
+	<td>{{x.address}}</td>
+	</tr>
+	
+	</table>
+	
+</div> -->
+		<div class="Buttons">
+			<button type="button" class="Buttons" ng-click="showSearch();showSpDet()">Search</button>
+			<form>
+				<fieldset ng-show="showTypes">
+					<div class="searchlocation">
+						Enter Location : <input type="text" class="location"
+							name="location" ng-model="loc">
+					</div>
+					<div id="ServiceType" class="ServiceType">
+						Choose Service Types : <label for="ServiceType"> Service
+							Type </label> <input type="radio" class="ServiceType" id="Elec"
+							ng-model="profession" value="Electrical">Electrical <input
+							type="radio" class="ServiceType" id="Plumbing"
+							ng-model="profession" value="Plumbing"> Plumbing <input
+							type="radio" class="ServiceType" id="PC" ng-model="profession"
+							value="PC Assist">PC Assist <input type="radio"
+							class="ServiceType" id="Carpentry" ng-model="profession"
+							value="Carpentry">Carpentry <input type="radio"
+							class="ServiceType" id="Mechanic" ng-model="profession"
+							value="Mechanic"> Mechanic <input type="radio"
+							class="ServiceType" id="Houseclean" ng-model="profession"
+							value="House Cleaning">House Cleaning
+					</div>
+					<div class="submitbtn">
+				<button type="submit" ng-click="showSpDet()">Search</button>
+			</div>
+				</fieldset>
+			</form>
+			
+		</div>
+
+
+		<div class="Searchsp" ng-show="showDetails">
+			<table>
+				<tr>
+					<th rowspan="2">ServiceProvider ID</th>
+					<th rowspan="2">Name</th>
+					<th rowspan="2">Phone number</th>
+					<th rowspan="2">Location</th>
+					<th colspan="2">Work timings</th>
+				</tr>
+				<tr>
+					<th>From</th>
+					<th>To</th>
+				</tr>
+				<!-- <div class="SpDetails"> -->
+					<tr ng-repeat="x in spdata | filter: loc | filter:profession">
+						<td>{{x.service_provider_id}}</td>
+						<td>{{x.service_provider_name}}</td>
+						<td>{{x.service_provider_phone_number}}</td>
+						<td>{{x.service_provider_location}}</td>
+						<td>{{x.service_provider_from_time}}</td>
+						<td>{{x.service_provider_to_time}}</td>
+
+						<td><button type="button" name="choice"
+								ng-click="custChoice();showAppt()" id="choice{{$index}}">Request
+								Appointment</button></td>
+					</tr>
+
+				
+			</table>
+			
+
+		</div>
+		<div class="Requestappointment" ng-show="showAppt" ng-repeat="y in spdata | filter : id">
+		<p>Service Provider {{id}} works from : {{y.service_provider_from_time}} to : {{y.service_provider_to_time}} </p>
+		
+		
+		</div>
+
+	</div>
+
+</body>
+
+
+
+<script src="Controller.js">
+</script>
+</html>
